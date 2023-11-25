@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coockie💛</title>
+    <link rel="icon" type="image/x-icon" href="./cookie-icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(238, 144, 144);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        #cookie {
+
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            filter: drop-shadow(0 0 20px white);
+            height: 30vh;
+        }
+        audio {
+            display: none;
+        }
+        #base {
+            animation: girar 20s linear infinite;
+            width: fit-content;
+        }
+
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="audioPlayer" controls>
+        <source src="./nam.mp4" type="audio/mp4">
+    </audio>
+    <h1>zahara clicker</h1>
+    <div id="base">
+
+
+        <img onclick="clickgalleta()" id="cookie" src="./cookie.webp" alt="">
+    </div>
+    <script>
+        function clickgalleta() {
+            const audio = document.getElementById('audioPlayer');
+            audio.volume = 0.6;
+            audio.play();
+            const cookie = document.getElementById('cookie');
+            if (cookie.style.transform === 'scale(0.9)') {
+                cookie.style.transform = 'scale(1)';
+            } else {
+                cookie.style.transform = 'scale(0.9)';
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
